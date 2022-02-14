@@ -42,6 +42,7 @@ public class AddressBookController {
     }
 
     //http://localhost:8082/addressbookspring/create
+    @PostMapping("/create")
     public ResponseEntity<ResponseDTO> addAddressBookData(@RequestBody AddressBookDTO addressBookDTO)
     {
         AddressBookService addressBookServices = null;
