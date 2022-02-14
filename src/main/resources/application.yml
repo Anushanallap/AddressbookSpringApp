@@ -10,5 +10,5 @@ server:
     datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/address_db
-      username: root
-      password: Windows@11
+      username: ${Address_DB_USERNAME:addressbookspring}
+      password: ${Address_DB_PASSWORD:password}
