@@ -18,7 +18,9 @@ public @Data class AddressBookDTO {
     @Pattern(regexp = "Male|Female", message = "Gender should be Male or Female")
     public String Gender;
 
-    @Pattern(regexp = "[1-9]{1}[0-9]{9}", message = "Mobile number is invalid")
+    //@Pattern(regexp = "[1-9]{1}[0-9]{9}", message = "Mobile number is invalid")
+    @Pattern(regexp = "[1-9]{1}[0-9]{9}", message = "Mobile number should be 10 digits")
+
     public String PhoneNum;
 
     @NotNull(message = "city can not be null")
