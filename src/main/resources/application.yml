@@ -1,14 +1,14 @@
-server:
-  port:
-    8082
-
-
-  spring:
-    profiles:
-      active: dev
-
-    datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/address_db
-      username: ${Address_DB_USERNAME:addressbookspring}
-      password: ${Address_DB_PASSWORD:password}
+#server:
+#  port:
+#    8082
+#
+#
+#  spring:
+#    profiles:
+#      active: dev
+#
+#    datasource:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: ${db_Url}
+#      username: ${db_Username}
+#      password: ${db_Password}

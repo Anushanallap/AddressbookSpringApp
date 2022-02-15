@@ -11,6 +11,8 @@ public interface IAddressBookService {
 
     AddressBookData getAddressBookDataById(int personId);
 
+    List<AddressBookData> getAddressBooksDataByState(String state);
+
     AddressBookData createAddressBookData(AddressBookDTO AddressBookDTO);
 
     AddressBookData updateAddressBookData(int personId, AddressBookDTO AddressBookDTO);

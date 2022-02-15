@@ -3,8 +3,14 @@ package com.bridgelabz.addressspringapp.model;
 import com.bridgelabz.addressspringapp.dto.AddressBookDTO;
 import lombok.Data;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Persondata")
 public @Data class AddressBookData {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int PersonId;
 
     private String FirstName;
@@ -19,10 +25,8 @@ public @Data class AddressBookData {
         this.updateAddressBookData(addressBookDTO);
 
     }
+    public AddressBookData() {
 
-    public AddressBookData(int i, AddressBookDTO addressBookDTO) {
-        this.PersonId = i;
-        this.updateAddressBookData(addressBookDTO);
     }
 
     public void updateAddressBookData(AddressBookDTO addressBookDTO) {
