@@ -10,7 +10,7 @@ import java.util.List;
 public interface AddressBookRepository extends JpaRepository<AddressBookData, Integer> {
 
 
-    @Query(value = "SELECT * FROM addressbook_application_db WHERE State = :state ", nativeQuery = true)
+    @Query(value = "SELECT * FROM address_book_db WHERE State = :state ", nativeQuery = true)
     List<AddressBookData> findAddressBookDataByState(String state);
 
 

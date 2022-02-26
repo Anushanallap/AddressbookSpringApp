@@ -6,38 +6,33 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Persondata")
+@Table(name = "persondata")
 public @Data class AddressBookData {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int PersonId;
+    private int person_id;
 
-    private String FirstName;
-    private String LastName;
-    private String Gender;
-    private String PhoneNum;
-    private String City;
-    private String State;
-    private String ZipCode;
+    private String fullName;
+    private String address;
+    private String city;
+    private String state;
+    private String zipNo;
+    private String phoneNumber;
+
+    public AddressBookData() {}
 
     public AddressBookData(AddressBookDTO addressBookDTO) {
         this.updateAddressBookData(addressBookDTO);
 
     }
-    public AddressBookData() {
-
-    }
-
     public void updateAddressBookData(AddressBookDTO addressBookDTO) {
 
-        this.FirstName = addressBookDTO.FirstName;
-        this.LastName = addressBookDTO.LastName;
-        this.Gender = addressBookDTO.Gender;
-        this.PhoneNum = addressBookDTO.PhoneNum;
-        this.City = addressBookDTO.City;
-        this.State = addressBookDTO.State;
-        this.ZipCode = addressBookDTO.ZipCode;
+        this.fullName = addressBookDTO.fullName;
+        this.address = addressBookDTO.address;
+        this.city = addressBookDTO.city;
+        this.state = addressBookDTO.state;
+        this.zipNo = addressBookDTO.zipNo;
+        this.phoneNumber = addressBookDTO.phoneNumber;
 
     }
 }

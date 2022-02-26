@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/addressbookspring")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AddressBookController {
     
     
@@ -44,6 +45,7 @@ public class AddressBookController {
     public ResponseEntity<ResponseDTO> addAddressBookData(@Valid @RequestBody AddressBookDTO addressBookDTO)
     {
         AddressBookData addressBookData = addressBookService.createAddressBookData(addressBookDTO);
+
         ResponseDTO respDTO = new ResponseDTO("Address book data created", addressBookData);
         return new ResponseEntity<ResponseDTO> (respDTO, HttpStatus.OK);
     }

@@ -39,7 +39,7 @@ public class AddressBookService implements IAddressBookService{
     @Override
     public AddressBookData createAddressBookData(AddressBookDTO addressBookDTO) {
         AddressBookData addressBookData = new AddressBookData(addressBookDTO);
-        return addressBookData;
+        return addressBookRepo.save(addressBookData);
     }
 
     @Override
